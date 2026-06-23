@@ -1,4 +1,17 @@
-# @rabelo-digital/ds-rd
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.1.1](https://github.com/rabelo-digital/ds-rd/compare/v1.1.0...v1.1.1) (2026-06-23)
+
+### Features
+
+- **DS:** release ([be074d9](https://github.com/rabelo-digital/ds-rd/commit/be074d9cf1a1bb5b55d870099c93176ef40d4a42))
+
+### Bug Fixes
+
+- **ci:** install Playwright browser for Storybook a11y tests ([7db1782](https://github.com/rabelo-digital/ds-rd/commit/7db17825ad3dbdcc869a7b133d2ca30f65890e79))
+- **storybook:** exclude mdx stories from CI indexer ([c948ef4](https://github.com/rabelo-digital/ds-rd/commit/c948ef4a372722a40b8b69b85ac864a8d4eeb7c7))
 
 ## 1.1.0
 
