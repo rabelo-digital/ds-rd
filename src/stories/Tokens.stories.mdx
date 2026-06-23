@@ -1,0 +1,124 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from "@storybook/blocks";
+
+<Meta title="Design Tokens/Overview" />
+
+# Design Tokens
+
+Tokens are the single source of truth for all design decisions in the Rabelo Digital Design System.
+Import them as TypeScript constants or use them as CSS custom properties via `tokens.css`.
+
+---
+
+## Colors — Semantic
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="Brand Blue — #02548B"
+    colors={{
+      Default: "var(--ds-color-primary)",
+      Hover: "var(--ds-color-primary-hover)",
+      Active: "var(--ds-color-primary-active)",
+      Subtle: "var(--ds-color-primary-subtle)",
+      Muted: "var(--ds-color-primary-muted)",
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="Brand Teal — #16B597"
+    colors={{
+      Default: "var(--ds-color-secondary)",
+      Hover: "var(--ds-color-secondary-hover)",
+      Subtle: "var(--ds-color-secondary-subtle)",
+    }}
+  />
+  <ColorItem
+    title="Accent"
+    subtitle="Orange — #FF3C00"
+    colors={{
+      Default: "var(--ds-color-accent)",
+      Hover: "var(--ds-color-accent-hover)",
+      Subtle: "var(--ds-color-accent-subtle)",
+    }}
+  />
+  <ColorItem
+    title="Success"
+    colors={{
+      Default: "var(--ds-color-success)",
+      Subtle: "var(--ds-color-success-subtle)",
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    colors={{
+      Default: "var(--ds-color-warning)",
+      Subtle: "var(--ds-color-warning-subtle)",
+    }}
+  />
+  <ColorItem
+    title="Error"
+    colors={{
+      Default: "var(--ds-color-error)",
+      Subtle: "var(--ds-color-error-subtle)",
+    }}
+  />
+  <ColorItem
+    title="Text"
+    colors={{
+      Default: "var(--ds-color-text)",
+      Muted: "var(--ds-color-text-muted)",
+      Subtle: "var(--ds-color-text-subtle)",
+      Disabled: "var(--ds-color-text-disabled)",
+      Link: "var(--ds-color-text-link)",
+    }}
+  />
+  <ColorItem
+    title="Border"
+    colors={{
+      Default: "var(--ds-color-border)",
+      Strong: "var(--ds-color-border-strong)",
+      Focus: "var(--ds-color-border-focus)",
+      Error: "var(--ds-color-border-error)",
+    }}
+  />
+</ColorPalette>
+
+---
+
+## Spacing
+
+Based on a 4px base unit. Use `--ds-space-{n}` CSS variables.
+
+| Token | Variable | Value |
+|-------|----------|-------|
+| 1 | `--ds-space-1` | 4px |
+| 2 | `--ds-space-2` | 8px |
+| 3 | `--ds-space-3` | 12px |
+| 4 | `--ds-space-4` | 16px |
+| 6 | `--ds-space-6` | 24px |
+| 8 | `--ds-space-8` | 32px |
+| 12 | `--ds-space-12` | 48px |
+| 16 | `--ds-space-16` | 64px |
+
+---
+
+## Typography
+
+<Typeset
+  fontSizes={[12, 14, 16, 18, 20, 24, 30, 36]}
+  fontWeight={400}
+  sampleText="Rabelo Digital Design System"
+  fontFamily="Inter, Segoe UI, system-ui, sans-serif"
+/>
+
+---
+
+## Usage
+
+```tsx
+// TypeScript constants
+import { semanticColors, spacing, typography } from "@rabelorp/ds-rd/tokens";
+
+// CSS custom properties (add to your root CSS)
+import "@rabelorp/ds-rd/tokens.css";
+```

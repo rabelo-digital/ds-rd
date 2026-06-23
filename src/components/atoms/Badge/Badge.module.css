@@ -1,0 +1,18 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--ds-font-family-base);
+  font-weight: var(--ds-font-weight-medium);
+  border-radius: var(--ds-radius-full);
+  white-space: nowrap;
+}
+
+.sm { padding: 2px var(--ds-space-2); font-size: var(--ds-font-size-xs); }
+.md { padding: var(--ds-space-1) var(--ds-space-2); font-size: var(--ds-font-size-sm); }
+
+.default { background: var(--ds-color-bg-muted); color: var(--ds-color-text); }
+.primary { background: var(--ds-color-primary-muted); color: var(--ds-color-primary); }
+.success { background: var(--ds-color-success-muted); color: var(--ds-color-success); }
+.warning { background: var(--ds-color-warning-muted); color: var(--ds-color-warning-hover); }
+.error { background: var(--ds-color-error-muted); color: var(--ds-color-error); }
+.info { background: var(--ds-color-info-muted); color: var(--ds-color-info); }

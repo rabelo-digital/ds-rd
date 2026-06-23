@@ -1,0 +1,27 @@
+.card {
+  background: var(--ds-color-surface);
+  border: 1px solid var(--ds-color-border);
+  overflow: hidden;
+}
+
+.header {
+  padding: var(--ds-space-4) var(--ds-space-6);
+  border-bottom: 1px solid var(--ds-color-border-muted);
+  font-weight: var(--ds-font-weight-semibold);
+  font-size: var(--ds-font-size-lg);
+  color: var(--ds-color-text);
+}
+
+.body {
+  padding: var(--ds-space-6);
+  color: var(--ds-color-text);
+}
+
+.footer {
+  padding: var(--ds-space-4) var(--ds-space-6);
+  border-top: 1px solid var(--ds-color-border-muted);
+  background: var(--ds-color-bg-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+}
