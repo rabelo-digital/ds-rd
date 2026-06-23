@@ -1,0 +1,238 @@
+/* ============================================================
+   Rabelo Digital Design System — Design Tokens
+   Generated from src/tokens/. Do not edit directly.
+   ============================================================ */
+
+:root {
+  /* ── Colors: Primitive ─────────────────────────────────── */
+  --ds-primitive-blue-50: #EAF4FB;
+  --ds-primitive-blue-100: #C5E0F2;
+  --ds-primitive-blue-200: #9BCCE9;
+  --ds-primitive-blue-300: #6DB7DF;
+  --ds-primitive-blue-400: #42A2D5;
+  --ds-primitive-blue-500: #1B8ECB;
+  --ds-primitive-blue-600: #1170A8;
+  --ds-primitive-blue-700: #02548B;
+  --ds-primitive-blue-800: #013E6A;
+  --ds-primitive-blue-900: #012849;
+
+  --ds-primitive-teal-50: #E9FAF6;
+  --ds-primitive-teal-100: #C0F1E6;
+  --ds-primitive-teal-200: #93E7D5;
+  --ds-primitive-teal-300: #62DAC2;
+  --ds-primitive-teal-400: #34CEAF;
+  --ds-primitive-teal-500: #16B597;
+  --ds-primitive-teal-600: #0E9278;
+  --ds-primitive-teal-700: #087059;
+  --ds-primitive-teal-800: #044E3D;
+  --ds-primitive-teal-900: #012E24;
+
+  --ds-primitive-orange-50: #FFF0EB;
+  --ds-primitive-orange-100: #FFDDD4;
+  --ds-primitive-orange-200: #FFC0AE;
+  --ds-primitive-orange-300: #FF9F87;
+  --ds-primitive-orange-400: #FF7358;
+  --ds-primitive-orange-500: #FF3C00;
+  --ds-primitive-orange-600: #D83200;
+  --ds-primitive-orange-700: #B02700;
+  --ds-primitive-orange-800: #881D00;
+  --ds-primitive-orange-900: #601300;
+
+  --ds-primitive-red-50: #FEF2F2;
+  --ds-primitive-red-100: #FEE2E2;
+  --ds-primitive-red-200: #FECACA;
+  --ds-primitive-red-300: #FCA5A5;
+  --ds-primitive-red-400: #F87171;
+  --ds-primitive-red-500: #EF4444;
+  --ds-primitive-red-600: #DC2626;
+  --ds-primitive-red-700: #B91C1C;
+  --ds-primitive-red-800: #991B1B;
+  --ds-primitive-red-900: #7F1D1D;
+
+  --ds-primitive-green-50: #ECFDF5;
+  --ds-primitive-green-100: #D1FAE5;
+  --ds-primitive-green-200: #A7F3D0;
+  --ds-primitive-green-300: #6EE7B7;
+  --ds-primitive-green-400: #34D399;
+  --ds-primitive-green-500: #10B981;
+  --ds-primitive-green-600: #059669;
+  --ds-primitive-green-700: #047857;
+  --ds-primitive-green-800: #065F46;
+  --ds-primitive-green-900: #064E3B;
+
+  --ds-primitive-yellow-50: #FFFBEB;
+  --ds-primitive-yellow-100: #FEF3C7;
+  --ds-primitive-yellow-200: #FDE68A;
+  --ds-primitive-yellow-300: #FCD34D;
+  --ds-primitive-yellow-400: #FBBF24;
+  --ds-primitive-yellow-500: #F59E0B;
+  --ds-primitive-yellow-600: #D97706;
+  --ds-primitive-yellow-700: #B45309;
+  --ds-primitive-yellow-800: #92400E;
+  --ds-primitive-yellow-900: #78350F;
+
+  --ds-primitive-gray-50: #F8F9FA;
+  --ds-primitive-gray-100: #E9ECEF;
+  --ds-primitive-gray-200: #DEE2E6;
+  --ds-primitive-gray-300: #CED4DA;
+  --ds-primitive-gray-400: #ADB5BD;
+  --ds-primitive-gray-500: #6C757D;
+  --ds-primitive-gray-600: #495057;
+  --ds-primitive-gray-700: #343A40;
+  --ds-primitive-gray-800: #212529;
+  --ds-primitive-gray-900: #111315;
+
+  /* ── Colors: Semantic ──────────────────────────────────── */
+  --ds-color-primary: #02548B;
+  --ds-color-primary-hover: #1170A8;
+  --ds-color-primary-active: #013E6A;
+  --ds-color-primary-subtle: #EAF4FB;
+  --ds-color-primary-muted: #C5E0F2;
+  --ds-color-on-primary: #FFFFFF;
+
+  --ds-color-secondary: #16B597;
+  --ds-color-secondary-hover: #0E9278;
+  --ds-color-secondary-active: #087059;
+  --ds-color-secondary-subtle: #E9FAF6;
+  --ds-color-secondary-muted: #C0F1E6;
+  --ds-color-on-secondary: #FFFFFF;
+
+  --ds-color-accent: #FF3C00;
+  --ds-color-accent-hover: #D83200;
+  --ds-color-accent-active: #B02700;
+  --ds-color-accent-subtle: #FFF0EB;
+  --ds-color-on-accent: #FFFFFF;
+
+  --ds-color-success: #059669;
+  --ds-color-success-hover: #047857;
+  --ds-color-success-subtle: #ECFDF5;
+  --ds-color-success-muted: #D1FAE5;
+  --ds-color-on-success: #FFFFFF;
+
+  --ds-color-warning: #F59E0B;
+  --ds-color-warning-hover: #D97706;
+  --ds-color-warning-subtle: #FFFBEB;
+  --ds-color-warning-muted: #FEF3C7;
+  --ds-color-on-warning: #111315;
+
+  --ds-color-error: #DC2626;
+  --ds-color-error-hover: #B91C1C;
+  --ds-color-error-subtle: #FEF2F2;
+  --ds-color-error-muted: #FEE2E2;
+  --ds-color-on-error: #FFFFFF;
+
+  --ds-color-info: #1B8ECB;
+  --ds-color-info-hover: #1170A8;
+  --ds-color-info-subtle: #EAF4FB;
+  --ds-color-info-muted: #C5E0F2;
+  --ds-color-on-info: #FFFFFF;
+
+  --ds-color-bg: #FFFFFF;
+  --ds-color-bg-subtle: #F8F9FA;
+  --ds-color-bg-muted: #E9ECEF;
+  --ds-color-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  --ds-color-surface: #FFFFFF;
+
+  --ds-color-text: #212529;
+  --ds-color-text-muted: #6C757D;
+  --ds-color-text-subtle: #ADB5BD;
+  --ds-color-text-disabled: #CED4DA;
+  --ds-color-text-inverse: #FFFFFF;
+  --ds-color-text-link: #02548B;
+  --ds-color-text-link-hover: #1170A8;
+
+  --ds-color-border: #DEE2E6;
+  --ds-color-border-strong: #CED4DA;
+  --ds-color-border-muted: #E9ECEF;
+  --ds-color-border-focus: #1B8ECB;
+  --ds-color-border-error: #EF4444;
+
+  --ds-color-disabled-bg: #E9ECEF;
+  --ds-color-disabled-text: #ADB5BD;
+  --ds-color-disabled-border: #DEE2E6;
+
+  /* ── Spacing ───────────────────────────────────────────── */
+  --ds-space-0: 0px;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-space-10: 40px;
+  --ds-space-12: 48px;
+  --ds-space-16: 64px;
+  --ds-space-24: 96px;
+  --ds-space-32: 128px;
+
+  /* ── Typography ────────────────────────────────────────── */
+  --ds-font-family-base: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --ds-font-family-heading: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --ds-font-family-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  --ds-font-size-xs: 0.75rem;
+  --ds-font-size-sm: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.125rem;
+  --ds-font-size-xl: 1.25rem;
+  --ds-font-size-2xl: 1.5rem;
+  --ds-font-size-3xl: 1.875rem;
+  --ds-font-size-4xl: 2.25rem;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+
+  --ds-line-height-tight: 1.25;
+  --ds-line-height-snug: 1.375;
+  --ds-line-height-normal: 1.5;
+  --ds-line-height-relaxed: 1.625;
+  --ds-line-height-loose: 2;
+
+  /* ── Border Radius ─────────────────────────────────────── */
+  --ds-radius-none: 0px;
+  --ds-radius-sm: 2px;
+  --ds-radius-md: 4px;
+  --ds-radius-lg: 8px;
+  --ds-radius-xl: 12px;
+  --ds-radius-2xl: 16px;
+  --ds-radius-full: 9999px;
+
+  /* ── Elevation (Shadow) ────────────────────────────────── */
+  --ds-elevation-none: none;
+  --ds-elevation-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ds-elevation-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ds-elevation-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --ds-elevation-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --ds-elevation-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* ── Z-Index ───────────────────────────────────────────── */
+  --ds-z-base: 0;
+  --ds-z-raised: 1;
+  --ds-z-dropdown: 1000;
+  --ds-z-sticky: 1020;
+  --ds-z-overlay: 1040;
+  --ds-z-modal: 1050;
+  --ds-z-toast: 1060;
+  --ds-z-tooltip: 1070;
+
+  /* ── Motion ────────────────────────────────────────────── */
+  --ds-motion-duration-fast: 100ms;
+  --ds-motion-duration-normal: 200ms;
+  --ds-motion-duration-slow: 300ms;
+  --ds-motion-duration-slower: 500ms;
+
+  --ds-motion-easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --ds-motion-easing-out: cubic-bezier(0, 0, 0.2, 1);
+  --ds-motion-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-motion-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Focus visible ring (global) ─────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--ds-color-border-focus);
+  outline-offset: 2px;
+}
