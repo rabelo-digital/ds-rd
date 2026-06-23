@@ -1,6 +1,7 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
+import React from "react";
 import { describe, it, expect } from "vitest";
+
 import { SocialIcons } from "./SocialIcons";
 
 describe("SocialIcons", () => {
@@ -9,7 +10,7 @@ describe("SocialIcons", () => {
       <SocialIcons
         links={[
           { platform: "linkedin", url: "https://linkedin.com" },
-          { platform: "github", url: "https://github.com" },
+          { platform: "github", url: "https://github.com" }
         ]}
       />
     );
@@ -18,9 +19,7 @@ describe("SocialIcons", () => {
   });
 
   it("each link has a descriptive aria-label", () => {
-    render(
-      <SocialIcons links={[{ platform: "linkedin", url: "https://linkedin.com" }]} />
-    );
+    render(<SocialIcons links={[{ platform: "linkedin", url: "https://linkedin.com" }]} />);
     expect(screen.getByRole("link")).toHaveAttribute("aria-label", "Seguir no LinkedIn");
   });
 
@@ -34,9 +33,7 @@ describe("SocialIcons", () => {
   });
 
   it("links open in new tab with rel noopener", () => {
-    render(
-      <SocialIcons links={[{ platform: "instagram", url: "https://instagram.com" }]} />
-    );
+    render(<SocialIcons links={[{ platform: "instagram", url: "https://instagram.com" }]} />);
     const link = screen.getByRole("link");
     expect(link).toHaveAttribute("target", "_blank");
     expect(link).toHaveAttribute("rel", "noopener noreferrer");

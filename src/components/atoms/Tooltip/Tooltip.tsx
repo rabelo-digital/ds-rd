@@ -1,5 +1,6 @@
-import React from "react";
 import * as RadixTooltip from "@radix-ui/react-tooltip";
+import React from "react";
+
 import styles from "./Tooltip.module.css";
 
 export type TooltipSide = "top" | "right" | "bottom" | "left";
@@ -17,7 +18,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   content,
   children,
   side = "top",
-  delayDuration = 300,
+  delayDuration = 300
 }) => (
   <RadixTooltip.Root delayDuration={delayDuration}>
     <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>

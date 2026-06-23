@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Card } from "./Card";
-import { Button } from "../../atoms/Button/Button";
 import React from "react";
+
+import { Button } from "../../atoms/Button/Button";
+
+import { Card } from "./Card";
 
 const meta: Meta<typeof Card> = {
   title: "Molecules/Card",
@@ -9,8 +11,8 @@ const meta: Meta<typeof Card> = {
   tags: ["autodocs"],
   argTypes: {
     elevation: { control: "select", options: ["none", "sm", "md", "lg", "xl"] },
-    radius: { control: "select", options: ["none", "sm", "md", "lg", "xl"] },
-  },
+    radius: { control: "select", options: ["none", "sm", "md", "lg", "xl"] }
+  }
 };
 
 export default meta;
@@ -21,7 +23,7 @@ export const Default: Story = {
     <Card>
       <Card.Body>Conteúdo simples do card.</Card.Body>
     </Card>
-  ),
+  )
 };
 
 export const WithAllSlots: Story = {
@@ -32,11 +34,13 @@ export const WithAllSlots: Story = {
         <p>Conteúdo principal do card com texto descritivo sobre o assunto.</p>
       </Card.Body>
       <Card.Footer>
-        <Button size="sm" variant="ghost">Cancelar</Button>
+        <Button size="sm" variant="ghost">
+          Cancelar
+        </Button>
         <Button size="sm">Confirmar</Button>
       </Card.Footer>
     </Card>
-  ),
+  )
 };
 
 export const ElevationVariants: Story = {
@@ -48,7 +52,7 @@ export const ElevationVariants: Story = {
         </Card>
       ))}
     </div>
-  ),
+  )
 };
 
 export const DarkMode: Story = {
@@ -58,5 +62,5 @@ export const DarkMode: Story = {
       <Card.Body>Card em modo escuro.</Card.Body>
     </Card>
   ),
-  parameters: { backgrounds: { default: "dark" } },
+  parameters: { backgrounds: { default: "dark" } }
 };

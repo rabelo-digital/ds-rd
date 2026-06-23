@@ -1,11 +1,13 @@
+import { render, screen, act } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
+
 import { Tabs } from "./Tabs";
 
 const tabs = [
   { value: "a", label: "Aba A", content: <p>Conteúdo A</p> },
-  { value: "b", label: "Aba B", content: <p>Conteúdo B</p> },
+  { value: "b", label: "Aba B", content: <p>Conteúdo B</p> }
 ];
 
 describe("Tabs", () => {
@@ -20,9 +22,12 @@ describe("Tabs", () => {
     expect(screen.getByText("Conteúdo A")).toBeInTheDocument();
   });
 
-  it("switches content on tab click", () => {
+  it("switches content on tab click", async () => {
+    const user = userEvent.setup();
     render(<Tabs tabs={tabs} />);
-    fireEvent.click(screen.getByRole("tab", { name: "Aba B" }));
+    await act(async () => {
+      await user.click(screen.getByRole("tab", { name: "Aba B" }));
+    });
     expect(screen.getByText("Conteúdo B")).toBeInTheDocument();
   });
 

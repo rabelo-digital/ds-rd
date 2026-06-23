@@ -1,5 +1,6 @@
-import React, { useId } from "react";
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
+import React, { useId } from "react";
+
 import styles from "./Checkbox.module.css";
 
 export interface CheckboxProps {
@@ -19,7 +20,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   disabled,
   label,
   id,
-  className,
+  className
 }) => {
   const generatedId = useId();
   const checkboxId = id ?? generatedId;
@@ -41,7 +42,13 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             </svg>
           ) : (
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
-              <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M1 4l2.5 2.5L9 1"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           )}
         </RadixCheckbox.Indicator>

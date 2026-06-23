@@ -1,5 +1,6 @@
-import React from "react";
 import * as RadixTabs from "@radix-ui/react-tabs";
+import React from "react";
+
 import styles from "./Tabs.module.css";
 
 export interface TabItem {
@@ -22,7 +23,7 @@ export const Tabs: React.FC<TabsProps> = ({
   defaultValue,
   value,
   onValueChange,
-  className,
+  className
 }) => (
   <RadixTabs.Root
     defaultValue={defaultValue ?? tabs[0]?.value}

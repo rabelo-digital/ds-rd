@@ -1,4 +1,5 @@
 import React, { useId } from "react";
+
 import styles from "./Input.module.css";
 
 export type InputSize = "sm" | "md" | "lg";
@@ -27,19 +28,13 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           id={inputId}
-          className={[
-            styles.input,
-            styles[size],
-            error ? styles.error : "",
-            className ?? "",
-          ]
+          className={[styles.input, styles[size], error ? styles.error : "", className ?? ""]
             .filter(Boolean)
             .join(" ")}
           aria-invalid={!!error}
           aria-describedby={
-            [error ? errorId : null, helperText ? helperId : null]
-              .filter(Boolean)
-              .join(" ") || undefined
+            [error ? errorId : null, helperText ? helperId : null].filter(Boolean).join(" ") ||
+            undefined
           }
           {...props}
         />

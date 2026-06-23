@@ -1,5 +1,6 @@
-import React from "react";
 import * as RadixAccordion from "@radix-ui/react-accordion";
+import React from "react";
+
 import styles from "./Accordion.module.css";
 
 export interface AccordionItem {
@@ -26,17 +27,35 @@ export const Accordion: React.FC<AccordionProps> = ({
   value,
   onValueChange,
   collapsible = true,
-  className,
+  className
 }) => {
   const rootClassName = [styles.root, className ?? ""].filter(Boolean).join(" ");
 
   const content = items.map((item) => (
-    <RadixAccordion.Item key={item.value} value={item.value} disabled={item.disabled} className={styles.item}>
+    <RadixAccordion.Item
+      key={item.value}
+      value={item.value}
+      disabled={item.disabled}
+      className={styles.item}
+    >
       <RadixAccordion.Header>
         <RadixAccordion.Trigger className={styles.trigger}>
           {item.trigger}
-          <svg className={styles.chevron} width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
-            <path d="M1 1l6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <svg
+            className={styles.chevron}
+            width="14"
+            height="9"
+            viewBox="0 0 14 9"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M1 1l6 6 6-6"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </RadixAccordion.Trigger>
       </RadixAccordion.Header>

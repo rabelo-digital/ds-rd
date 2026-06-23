@@ -1,6 +1,7 @@
-import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+import React from "react";
 import { describe, it, expect, vi } from "vitest";
+
 import { Button } from "./Button";
 
 describe("Button", () => {
@@ -29,7 +30,11 @@ describe("Button", () => {
 
   it("does not call onClick when disabled", () => {
     const handler = vi.fn();
-    render(<Button disabled onClick={handler}>Click</Button>);
+    render(
+      <Button disabled onClick={handler}>
+        Click
+      </Button>
+    );
     fireEvent.click(screen.getByRole("button"));
     expect(handler).not.toHaveBeenCalled();
   });

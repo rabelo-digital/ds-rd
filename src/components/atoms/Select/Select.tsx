@@ -1,5 +1,6 @@
-import React, { useId } from "react";
 import * as RadixSelect from "@radix-ui/react-select";
+import React, { useId } from "react";
+
 import styles from "./Select.module.css";
 
 export interface SelectOption {
@@ -37,7 +38,7 @@ export const Select: React.FC<SelectProps> = ({
   disabled,
   size = "md",
   id,
-  className,
+  className
 }) => {
   const generatedId = useId();
   const selectId = id ?? generatedId;
@@ -66,7 +67,13 @@ export const Select: React.FC<SelectProps> = ({
           <RadixSelect.Value placeholder={placeholder} />
           <RadixSelect.Icon className={styles.icon}>
             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
-              <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M1 1l5 5 5-5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </RadixSelect.Icon>
         </RadixSelect.Trigger>
@@ -84,7 +91,13 @@ export const Select: React.FC<SelectProps> = ({
                   <RadixSelect.ItemText>{option.label}</RadixSelect.ItemText>
                   <RadixSelect.ItemIndicator className={styles.itemIndicator}>
                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none" aria-hidden="true">
-                      <path d="M1 5l3 3 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path
+                        d="M1 5l3 3 7-7"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </RadixSelect.ItemIndicator>
                 </RadixSelect.Item>
@@ -99,9 +112,7 @@ export const Select: React.FC<SelectProps> = ({
           {error}
         </span>
       )}
-      {helperText && !error && (
-        <span className={styles.helperText}>{helperText}</span>
-      )}
+      {helperText && !error && <span className={styles.helperText}>{helperText}</span>}
     </div>
   );
 };

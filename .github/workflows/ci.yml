@@ -16,31 +16,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
-      - run: pnpm typecheck
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
 
   test:
     name: Tests & Coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm test:coverage
+          cache: npm
+      - run: npm ci
+      - run: npm run test:coverage
 
   build:
     name: Build Package
@@ -48,15 +42,12 @@ jobs:
     needs: [lint, test]
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+          cache: npm
+      - run: npm ci
+      - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -68,17 +59,14 @@ jobs:
     needs: [build]
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build-storybook --quiet
+          cache: npm
+      - run: npm ci
+      - run: npm run build-storybook -- --quiet
       - name: Run Storybook test runner
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && pnpm test-storybook"
+            "npx wait-on tcp:6006 && npm run test-storybook"

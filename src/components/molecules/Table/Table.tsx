@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "./Table.module.css";
 
 type TableHeadProps = React.HTMLAttributes<HTMLTableSectionElement>;
@@ -40,9 +41,15 @@ const TableCell: React.FC<TableCellProps> = ({
   children,
   ...props
 }) => {
-  const cellClass = [Tag === "th" ? styles.th : styles.td, className ?? ""].filter(Boolean).join(" ");
+  const cellClass = [Tag === "th" ? styles.th : styles.td, className ?? ""]
+    .filter(Boolean)
+    .join(" ");
   return (
-    <Tag className={cellClass} scope={scope} {...(props as React.HTMLAttributes<HTMLTableCellElement>)}>
+    <Tag
+      className={cellClass}
+      scope={scope}
+      {...(props as React.HTMLAttributes<HTMLTableCellElement>)}
+    >
       {children}
     </Tag>
   );

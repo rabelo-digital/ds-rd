@@ -27,7 +27,12 @@ export { Tooltip, TooltipProvider } from "./atoms/Tooltip/Tooltip";
 export type { TooltipProps, TooltipSide } from "./atoms/Tooltip/Tooltip";
 
 export { SocialIcons } from "./atoms/SocialIcons/SocialIcons";
-export type { SocialIconsProps, SocialLink, SocialPlatform, SocialIconSize } from "./atoms/SocialIcons/SocialIcons";
+export type {
+  SocialIconsProps,
+  SocialLink,
+  SocialPlatform,
+  SocialIconSize
+} from "./atoms/SocialIcons/SocialIcons";
 
 // Molecules
 export { Card } from "./molecules/Card/Card";
@@ -49,4 +54,4 @@ export { ToastProvider, useToast } from "./molecules/Toast/Toast";
 export type { ToastMessage, ToastVariant } from "./molecules/Toast/Toast";
 
 export { Table } from "./molecules/Table/Table";
-export type { } from "./molecules/Table/Table";
+export type {} from "./molecules/Table/Table";

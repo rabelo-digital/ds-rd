@@ -1,5 +1,6 @@
-import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import React from "react";
+
 import styles from "./Modal.module.css";
 
 export type ModalSize = "sm" | "md" | "lg" | "xl" | "full";
@@ -21,7 +22,7 @@ export const Modal: React.FC<ModalProps> = ({
   description,
   size = "md",
   children,
-  trigger,
+  trigger
 }) => (
   <Dialog.Root open={open} onOpenChange={onOpenChange}>
     {trigger && <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>}
@@ -32,13 +33,16 @@ export const Modal: React.FC<ModalProps> = ({
         aria-describedby={description ? "modal-description" : undefined}
       >
         <div className={styles.header}>
-          {title && (
-            <Dialog.Title className={styles.title}>{title}</Dialog.Title>
-          )}
+          {title && <Dialog.Title className={styles.title}>{title}</Dialog.Title>}
           <Dialog.Close asChild>
             <button className={styles.close} aria-label="Fechar">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path
+                  d="M2 2l12 12M14 2L2 14"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
             </button>
           </Dialog.Close>

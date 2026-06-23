@@ -1,13 +1,14 @@
 import { describe, it, expect } from "vitest";
-import { primitiveColors, semanticColors } from "./colors.primitive";
+
+import { breakpoints } from "./breakpoints";
+import { primitiveColors } from "./colors.primitive";
 import { semanticColors as semantic } from "./colors.semantic";
+import { elevation } from "./elevation";
+import { motion } from "./motion";
+import { radii } from "./radii";
 import { spacing } from "./spacing";
 import { typography } from "./typography";
-import { radii } from "./radii";
-import { elevation } from "./elevation";
 import { zIndex } from "./zIndex";
-import { motion } from "./motion";
-import { breakpoints } from "./breakpoints";
 
 const HEX_REGEX = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/;
 const CSS_VALUE_REGEX = /^[\d.]+(?:px|rem|em|%|ms|s)$|^none$|^rgba?\(|^cubic-bezier\(|^\d+$/;

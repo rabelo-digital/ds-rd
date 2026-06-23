@@ -1,0 +1,38 @@
+schema: spec-driven
+
+context: |
+  ## Fonte de verdade
+
+  Toda convenção, decisão arquitetural e guia do projeto vive em `docs/`.
+  Siga `docs/` à risca — não invente padrões nem contradiga o que está documentado.
+  Em caso de dúvida ou conflito, `docs/` prevalece sobre qualquer suposição.
+
+  Leia e respeite antes de propor ou implementar:
+  - `docs/getting-started.md` — instalação, tokens, componentes, providers
+  - `docs/migration-guide.md` — mapa de imports legados → DS
+  - `docs/adr/` — decisões arquiteturais (tokens, build, a11y, release, repositório)
+  - `docs/c4/` — contexto e containers do sistema
+
+  Atualizações de convenção entram somente em `docs/`; artefatos OpenSpec devem refletir o que está lá.
+
+  ## Stack e toolchain
+
+  - Repositório: `@rabelo-digital/ds-rd` (Design System React publicado no npm)
+  - Linguagem: TypeScript; componentes React 18+; CSS Modules; tokens em TS + `tokens.css`
+  - Build: tsup (ESM + CJS + `.d.ts`); Storybook 8; testes com Vitest + Testing Library
+  - Release: Changesets (`changesets/action` no CI)
+  - Package manager do repo: **npm** (`npm ci`, `npm run <script>`) — não usar pnpm neste projeto
+  - Commits: Conventional Commits; código/commits/PRs em inglês; documentação em PT-BR
+
+rules:
+  proposal:
+    - Consulte `docs/adr/` e `docs/c4/` antes de propor mudanças arquiteturais
+    - Não contradiga ADRs aceitos sem explicitar a necessidade de um novo ADR
+  design:
+    - Alinhar com ADRs em `docs/adr/` (tokens, tsup, Radix/a11y, changesets, repo separado)
+    - Componentes: CSS Modules + tokens (`var(--ds-*)`); evitar hex hardcoded e `style={{}}` inline
+  tasks:
+    - Scripts e CI usam npm (`npm run`, `npm ci`), nunca pnpm
+    - Validar com `npm run validate` ou `npm run ci:check` quando aplicável
+  specs:
+    - Requisitos devem ser compatíveis com `docs/getting-started.md` e `docs/migration-guide.md`

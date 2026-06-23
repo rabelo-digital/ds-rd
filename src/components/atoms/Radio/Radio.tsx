@@ -1,5 +1,6 @@
-import React, { useId } from "react";
 import * as RadixRadio from "@radix-ui/react-radio-group";
+import React, { useId } from "react";
+
 import styles from "./Radio.module.css";
 
 export interface RadioOption {
@@ -27,7 +28,7 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({
   disabled,
   name,
   orientation = "vertical",
-  className,
+  className
 }) => {
   const baseId = useId();
 

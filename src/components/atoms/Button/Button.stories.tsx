@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -9,8 +10,8 @@ const meta: Meta<typeof Button> = {
     variant: { control: "select", options: ["primary", "secondary", "ghost", "danger"] },
     size: { control: "select", options: ["sm", "md", "lg"] },
     loading: { control: "boolean" },
-    disabled: { control: "boolean" },
-  },
+    disabled: { control: "boolean" }
+  }
 };
 
 export default meta;
@@ -26,5 +27,5 @@ export const SmallSize: Story = { args: { children: "Pequeno", size: "sm" } };
 export const LargeSize: Story = { args: { children: "Grande", size: "lg" } };
 export const DarkMode: Story = {
   args: { children: "Dark mode", variant: "primary" },
-  parameters: { backgrounds: { default: "dark" } },
+  parameters: { backgrounds: { default: "dark" } }
 };

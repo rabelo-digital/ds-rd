@@ -9,7 +9,7 @@ export const primitiveColors = {
     600: "#1170A8",
     700: "#02548B",
     800: "#013E6A",
-    900: "#012849",
+    900: "#012849"
   },
   teal: {
     50: "#E9FAF6",
@@ -21,7 +21,7 @@ export const primitiveColors = {
     600: "#0E9278",
     700: "#087059",
     800: "#044E3D",
-    900: "#012E24",
+    900: "#012E24"
   },
   orange: {
     50: "#FFF0EB",
@@ -33,7 +33,7 @@ export const primitiveColors = {
     600: "#D83200",
     700: "#B02700",
     800: "#881D00",
-    900: "#601300",
+    900: "#601300"
   },
   red: {
     50: "#FEF2F2",
@@ -45,7 +45,7 @@ export const primitiveColors = {
     600: "#DC2626",
     700: "#B91C1C",
     800: "#991B1B",
-    900: "#7F1D1D",
+    900: "#7F1D1D"
   },
   green: {
     50: "#ECFDF5",
@@ -57,7 +57,7 @@ export const primitiveColors = {
     600: "#059669",
     700: "#047857",
     800: "#065F46",
-    900: "#064E3B",
+    900: "#064E3B"
   },
   yellow: {
     50: "#FFFBEB",
@@ -69,7 +69,7 @@ export const primitiveColors = {
     600: "#D97706",
     700: "#B45309",
     800: "#92400E",
-    900: "#78350F",
+    900: "#78350F"
   },
   gray: {
     50: "#F8F9FA",
@@ -81,10 +81,10 @@ export const primitiveColors = {
     600: "#495057",
     700: "#343A40",
     800: "#212529",
-    900: "#111315",
+    900: "#111315"
   },
   white: "#FFFFFF",
-  black: "#000000",
+  black: "#000000"
 } as const;
 
 export type PrimitiveColors = typeof primitiveColors;

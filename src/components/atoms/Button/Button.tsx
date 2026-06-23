@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "./Button.module.css";
 
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
@@ -35,7 +36,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           styles[variant],
           styles[size],
           loading ? styles.loading : "",
-          className ?? "",
+          className ?? ""
         ]
           .filter(Boolean)
           .join(" ")}
@@ -45,12 +46,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         onClick={isDisabled ? undefined : onClick}
         {...props}
       >
-        <span className={loading ? styles.labelHidden : styles.label}>
-          {children}
-        </span>
-        {loading && (
-          <span className={styles.spinner} aria-hidden="true" />
-        )}
+        <span className={loading ? styles.labelHidden : styles.label}>{children}</span>
+        {loading && <span className={styles.spinner} aria-hidden="true" />}
       </button>
     );
   }

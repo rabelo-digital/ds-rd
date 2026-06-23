@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./Card.module.css";
+
 import type { ElevationKey, RadiiKey } from "../../../tokens";
+
+import styles from "./Card.module.css";
 
 export interface CardProps {
   elevation?: ElevationKey;
@@ -15,21 +17,15 @@ interface CardSectionProps {
 }
 
 const CardHeader: React.FC<CardSectionProps> = ({ children, className }) => (
-  <div className={[styles.header, className ?? ""].filter(Boolean).join(" ")}>
-    {children}
-  </div>
+  <div className={[styles.header, className ?? ""].filter(Boolean).join(" ")}>{children}</div>
 );
 
 const CardBody: React.FC<CardSectionProps> = ({ children, className }) => (
-  <div className={[styles.body, className ?? ""].filter(Boolean).join(" ")}>
-    {children}
-  </div>
+  <div className={[styles.body, className ?? ""].filter(Boolean).join(" ")}>{children}</div>
 );
 
 const CardFooter: React.FC<CardSectionProps> = ({ children, className }) => (
-  <div className={[styles.footer, className ?? ""].filter(Boolean).join(" ")}>
-    {children}
-  </div>
+  <div className={[styles.footer, className ?? ""].filter(Boolean).join(" ")}>{children}</div>
 );
 
 export const Card: React.FC<CardProps> & {
@@ -41,7 +37,7 @@ export const Card: React.FC<CardProps> & {
     className={[styles.card, className ?? ""].filter(Boolean).join(" ")}
     style={{
       boxShadow: `var(--ds-elevation-${elevation})`,
-      borderRadius: `var(--ds-radius-${radius})`,
+      borderRadius: `var(--ds-radius-${radius})`
     }}
   >
     {children}

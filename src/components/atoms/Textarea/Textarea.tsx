@@ -1,4 +1,5 @@
 import React, { useId, useState } from "react";
+
 import styles from "./Textarea.module.css";
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -17,9 +18,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     const textareaId = id ?? generatedId;
     const errorId = `${textareaId}-error`;
     const helperId = `${textareaId}-helper`;
-    const [count, setCount] = useState(
-      typeof props.value === "string" ? props.value.length : 0
-    );
+    const [count, setCount] = useState(typeof props.value === "string" ? props.value.length : 0);
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       setCount(e.target.value.length);
@@ -43,9 +42,8 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           onChange={handleChange}
           aria-invalid={!!error}
           aria-describedby={
-            [error ? errorId : null, helperText ? helperId : null]
-              .filter(Boolean)
-              .join(" ") || undefined
+            [error ? errorId : null, helperText ? helperId : null].filter(Boolean).join(" ") ||
+            undefined
           }
           {...props}
         />

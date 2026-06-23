@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Table } from "./Table";
 import React from "react";
+
+import { Table } from "./Table";
 
 const meta: Meta<typeof Table> = { title: "Molecules/Table", component: Table, tags: ["autodocs"] };
 export default meta;
@@ -11,9 +12,15 @@ export const Default: Story = {
     <Table>
       <Table.Head>
         <Table.Row>
-          <Table.Cell as="th" scope="col">Nome</Table.Cell>
-          <Table.Cell as="th" scope="col">Email</Table.Cell>
-          <Table.Cell as="th" scope="col">Status</Table.Cell>
+          <Table.Cell as="th" scope="col">
+            Nome
+          </Table.Cell>
+          <Table.Cell as="th" scope="col">
+            Email
+          </Table.Cell>
+          <Table.Cell as="th" scope="col">
+            Status
+          </Table.Cell>
         </Table.Row>
       </Table.Head>
       <Table.Body>
@@ -24,7 +31,7 @@ export const Default: Story = {
         </Table.Row>
       </Table.Body>
     </Table>
-  ),
+  )
 };
 
 export const WithManyRows: Story = {
@@ -32,9 +39,15 @@ export const WithManyRows: Story = {
     <Table>
       <Table.Head>
         <Table.Row>
-          <Table.Cell as="th" scope="col">#</Table.Cell>
-          <Table.Cell as="th" scope="col">Nome</Table.Cell>
-          <Table.Cell as="th" scope="col">Valor</Table.Cell>
+          <Table.Cell as="th" scope="col">
+            #
+          </Table.Cell>
+          <Table.Cell as="th" scope="col">
+            Nome
+          </Table.Cell>
+          <Table.Cell as="th" scope="col">
+            Valor
+          </Table.Cell>
         </Table.Row>
       </Table.Head>
       <Table.Body>
@@ -47,7 +60,7 @@ export const WithManyRows: Story = {
         ))}
       </Table.Body>
     </Table>
-  ),
+  )
 };
 
 export const DarkMode: Story = {
@@ -55,13 +68,17 @@ export const DarkMode: Story = {
     <Table>
       <Table.Head>
         <Table.Row>
-          <Table.Cell as="th" scope="col">Coluna</Table.Cell>
+          <Table.Cell as="th" scope="col">
+            Coluna
+          </Table.Cell>
         </Table.Row>
       </Table.Head>
       <Table.Body>
-        <Table.Row><Table.Cell>Valor</Table.Cell></Table.Row>
+        <Table.Row>
+          <Table.Cell>Valor</Table.Cell>
+        </Table.Row>
       </Table.Body>
     </Table>
   ),
-  parameters: { backgrounds: { default: "dark" } },
+  parameters: { backgrounds: { default: "dark" } }
 };

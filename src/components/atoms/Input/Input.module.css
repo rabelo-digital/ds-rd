@@ -57,9 +57,21 @@
 }
 
 /* Sizes */
-.sm { padding: var(--ds-space-1) var(--ds-space-2); font-size: var(--ds-font-size-sm); min-height: 32px; }
-.md { padding: var(--ds-space-2) var(--ds-space-3); font-size: var(--ds-font-size-md); min-height: 40px; }
-.lg { padding: var(--ds-space-3) var(--ds-space-4); font-size: var(--ds-font-size-lg); min-height: 48px; }
+.sm {
+  padding: var(--ds-space-1) var(--ds-space-2);
+  font-size: var(--ds-font-size-sm);
+  min-height: 32px;
+}
+.md {
+  padding: var(--ds-space-2) var(--ds-space-3);
+  font-size: var(--ds-font-size-md);
+  min-height: 40px;
+}
+.lg {
+  padding: var(--ds-space-3) var(--ds-space-4);
+  font-size: var(--ds-font-size-lg);
+  min-height: 48px;
+}
 
 .helperText {
   font-size: var(--ds-font-size-xs);

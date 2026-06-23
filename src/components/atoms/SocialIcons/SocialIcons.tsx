@@ -6,8 +6,9 @@ import {
   FaYoutube,
   FaWhatsapp,
   FaFacebookF,
-  FaTwitter,
+  FaTwitter
 } from "react-icons/fa";
+
 import styles from "./SocialIcons.module.css";
 
 export type SocialPlatform =
@@ -40,7 +41,7 @@ const ICON_MAP: Record<SocialPlatform, React.ElementType> = {
   youtube: FaYoutube,
   whatsapp: FaWhatsapp,
   facebook: FaFacebookF,
-  twitter: FaTwitter,
+  twitter: FaTwitter
 };
 
 const DEFAULT_LABELS: Record<SocialPlatform, string> = {
@@ -50,18 +51,11 @@ const DEFAULT_LABELS: Record<SocialPlatform, string> = {
   youtube: "Assistir no YouTube",
   whatsapp: "Conversar no WhatsApp",
   facebook: "Seguir no Facebook",
-  twitter: "Seguir no Twitter",
+  twitter: "Seguir no Twitter"
 };
 
-export const SocialIcons: React.FC<SocialIconsProps> = ({
-  links,
-  size = "md",
-  className,
-}) => (
-  <ul
-    className={[styles.list, className ?? ""].filter(Boolean).join(" ")}
-    role="list"
-  >
+export const SocialIcons: React.FC<SocialIconsProps> = ({ links, size = "md", className }) => (
+  <ul className={[styles.list, className ?? ""].filter(Boolean).join(" ")}>
     {links.map(({ platform, url, label }) => {
       const Icon = ICON_MAP[platform];
       const ariaLabel = label ?? DEFAULT_LABELS[platform];

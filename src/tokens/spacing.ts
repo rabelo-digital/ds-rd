@@ -12,7 +12,7 @@ export const spacing = {
   12: "48px",
   16: "64px",
   24: "96px",
-  32: "128px",
+  32: "128px"
 } as const;
 
 export type SpacingKey = keyof typeof spacing;

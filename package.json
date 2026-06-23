@@ -1,6 +1,6 @@
 {
   "name": "@rabelo-digital/ds-rd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Rabelo Digital Design System",
   "keywords": [
     "design-system",
@@ -51,8 +51,9 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,json,css,md}\" \"*.{json,md,cjs}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,json,css,md}\" \"*.{json,md,cjs}\"",
     "typecheck": "tsc --noEmit",
-    "validate": "pnpm format:check && pnpm lint && pnpm typecheck",
-    "ci:check": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
+    "validate": "npm run format:check && npm run lint && npm run typecheck",
+    "ci:check": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "test-storybook": "test-storybook",
     "changeset": "changeset",
     "release": "changeset publish",
     "prepare": "husky install"
@@ -91,6 +92,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "@vitest/coverage-v8": "^2.0.5",
     "axe-playwright": "^2.0.1",
     "eslint": "^8.57.0",

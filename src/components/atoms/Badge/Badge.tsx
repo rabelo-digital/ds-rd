@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "./Badge.module.css";
 
 export type BadgeVariant = "default" | "primary" | "success" | "warning" | "error" | "info";
@@ -15,7 +16,7 @@ export const Badge: React.FC<BadgeProps> = ({
   variant = "default",
   size = "md",
   children,
-  className,
+  className
 }) => (
   <span
     className={[styles.badge, styles[variant], styles[size], className ?? ""]

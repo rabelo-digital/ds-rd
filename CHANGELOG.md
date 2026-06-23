@@ -1,5 +1,14 @@
 # @rabelo-digital/ds-rd
 
+## 1.1.0
+
+### Minor Changes
+
+- Migrate package manager from pnpm to npm (CI, scripts, lockfile)
+- Align component APIs and token usage across atoms and molecules
+- Fix lint regressions (SocialIcons, Toast) and Tabs interaction test
+- Add OpenSpec project context referencing `docs/` as source of truth
+
 ## 1.0.0
 
 ### Minor Changes

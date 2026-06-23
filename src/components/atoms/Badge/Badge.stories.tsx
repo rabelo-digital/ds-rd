@@ -1,15 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badge } from "./Badge";
 import React from "react";
+
+import { Badge } from "./Badge";
 
 const meta: Meta<typeof Badge> = {
   title: "Atoms/Badge",
   component: Badge,
   tags: ["autodocs"],
   argTypes: {
-    variant: { control: "select", options: ["default", "primary", "success", "warning", "error", "info"] },
-    size: { control: "select", options: ["sm", "md"] },
-  },
+    variant: {
+      control: "select",
+      options: ["default", "primary", "success", "warning", "error", "info"]
+    },
+    size: { control: "select", options: ["sm", "md"] }
+  }
 };
 
 export default meta;
@@ -26,12 +30,14 @@ export const AllVariants: Story = {
   render: () => (
     <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
       {(["default", "primary", "success", "warning", "error", "info"] as const).map((v) => (
-        <Badge key={v} variant={v}>{v}</Badge>
+        <Badge key={v} variant={v}>
+          {v}
+        </Badge>
       ))}
     </div>
-  ),
+  )
 };
 export const DarkMode: Story = {
   args: { children: "Dark", variant: "primary" },
-  parameters: { backgrounds: { default: "dark" } },
+  parameters: { backgrounds: { default: "dark" } }
 };

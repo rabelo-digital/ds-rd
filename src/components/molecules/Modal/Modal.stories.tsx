@@ -1,12 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Modal } from "./Modal";
-import { Button } from "../../atoms/Button/Button";
 import React from "react";
+
+import { Button } from "../../atoms/Button/Button";
+
+import { Modal } from "./Modal";
 
 const meta: Meta<typeof Modal> = {
   title: "Molecules/Modal",
   component: Modal,
-  tags: ["autodocs"],
+  tags: ["autodocs"]
 };
 
 export default meta;
@@ -17,7 +19,7 @@ export const Default: Story = {
     <Modal title="Título do Modal" trigger={<Button>Abrir Modal</Button>}>
       <p>Conteúdo do modal aqui.</p>
     </Modal>
-  ),
+  )
 };
 
 export const WithDescription: Story = {
@@ -28,11 +30,15 @@ export const WithDescription: Story = {
       trigger={<Button variant="danger">Excluir</Button>}
     >
       <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
-        <Button variant="ghost" size="sm">Cancelar</Button>
-        <Button variant="danger" size="sm">Excluir</Button>
+        <Button variant="ghost" size="sm">
+          Cancelar
+        </Button>
+        <Button variant="danger" size="sm">
+          Excluir
+        </Button>
       </div>
     </Modal>
-  ),
+  )
 };
 
 export const LargeModal: Story = {
@@ -40,7 +46,7 @@ export const LargeModal: Story = {
     <Modal title="Modal Grande" size="lg" trigger={<Button>Abrir</Button>}>
       <p>Modal com mais espaço para conteúdo extenso.</p>
     </Modal>
-  ),
+  )
 };
 
 export const DarkMode: Story = {
@@ -49,5 +55,5 @@ export const DarkMode: Story = {
       <p>Modal em dark mode.</p>
     </Modal>
   ),
-  parameters: { backgrounds: { default: "dark" } },
+  parameters: { backgrounds: { default: "dark" } }
 };

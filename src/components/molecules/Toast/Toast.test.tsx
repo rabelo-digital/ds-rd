@@ -1,6 +1,7 @@
-import React from "react";
 import { render, screen, fireEvent, act } from "@testing-library/react";
+import React from "react";
 import { describe, it, expect, vi } from "vitest";
+
 import { ToastProvider, useToast } from "./Toast";
 
 const ShowButton = ({ title }: { title: string }) => {
@@ -21,12 +22,18 @@ describe("Toast / useToast", () => {
         <ShowButton title="Operação realizada" />
       </ToastProvider>
     );
-    await act(async () => { fireEvent.click(screen.getByRole("button", { name: "Show" })); });
+    await act(async () => {
+      fireEvent.click(screen.getByRole("button", { name: "Show" }));
+    });
     expect(screen.getByText("Operação realizada")).toBeInTheDocument();
   });
 
   it("toast viewport has aria-label for screen readers", () => {
-    render(<ToastProvider><div /></ToastProvider>);
+    render(
+      <ToastProvider>
+        <div />
+      </ToastProvider>
+    );
     expect(screen.getByRole("region", { name: "Notificações" })).toBeInTheDocument();
   });
 });

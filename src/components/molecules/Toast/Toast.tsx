@@ -1,5 +1,6 @@
-import React, { createContext, useCallback, useContext, useState } from "react";
 import * as RadixToast from "@radix-ui/react-toast";
+import React, { createContext, useCallback, useContext, useState } from "react";
+
 import styles from "./Toast.module.css";
 
 export type ToastVariant = "default" | "success" | "warning" | "error" | "info";
@@ -45,7 +46,9 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             key={toast.id}
             duration={toast.duration ?? 4000}
             className={[styles.root, styles[toast.variant ?? "default"]].join(" ")}
-            onOpenChange={(open) => { if (!open) dismiss(toast.id); }}
+            onOpenChange={(open) => {
+              if (!open) dismiss(toast.id);
+            }}
           >
             <div className={styles.content}>
               <div className={styles.text}>
@@ -59,14 +62,19 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
               <RadixToast.Close asChild>
                 <button className={styles.close} aria-label="Fechar notificação">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    <path
+                      d="M1 1l10 10M11 1L1 11"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
                   </svg>
                 </button>
               </RadixToast.Close>
             </div>
           </RadixToast.Root>
         ))}
-        <RadixToast.Viewport className={styles.viewport} aria-label="Notificações" />
+        <RadixToast.Viewport className={styles.viewport} aria-label="Notificações" role="region" />
       </RadixToast.Provider>
     </ToastContext.Provider>
   );

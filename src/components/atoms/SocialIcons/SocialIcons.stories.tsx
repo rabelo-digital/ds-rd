@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { SocialIcons } from "./SocialIcons";
 import type { SocialLink } from "./SocialIcons";
 
@@ -7,14 +8,14 @@ const allLinks: SocialLink[] = [
   { platform: "instagram", url: "https://instagram.com/rabelodigital" },
   { platform: "github", url: "https://github.com/rabelorp" },
   { platform: "youtube", url: "https://youtube.com/@rabelodigital" },
-  { platform: "whatsapp", url: "https://wa.me/5517981410907" },
+  { platform: "whatsapp", url: "https://wa.me/5517981410907" }
 ];
 
 const meta: Meta<typeof SocialIcons> = {
   title: "Atoms/SocialIcons",
   component: SocialIcons,
   tags: ["autodocs"],
-  argTypes: { size: { control: "select", options: ["sm", "md", "lg"] } },
+  argTypes: { size: { control: "select", options: ["sm", "md", "lg"] } }
 };
 
 export default meta;
@@ -25,12 +26,12 @@ export const Subset: Story = {
   args: {
     links: [
       { platform: "linkedin", url: "https://linkedin.com" },
-      { platform: "github", url: "https://github.com" },
-    ],
-  },
+      { platform: "github", url: "https://github.com" }
+    ]
+  }
 };
 export const LargeSize: Story = { args: { links: allLinks, size: "lg" } };
 export const DarkMode: Story = {
   args: { links: allLinks },
-  parameters: { backgrounds: { default: "dark" } },
+  parameters: { backgrounds: { default: "dark" } }
 };

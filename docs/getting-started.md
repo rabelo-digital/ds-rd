@@ -4,10 +4,6 @@
 
 ```bash
 npm install @rabelo-digital/ds-rd
-# ou
-pnpm add @rabelo-digital/ds-rd
-# ou
-yarn add @rabelo-digital/ds-rd
 ```
 
 > **Peer dependencies:** React ≥ 18 e react-dom ≥ 18 devem estar instalados no seu projeto.
@@ -103,7 +99,7 @@ Explore todos os componentes e seus estados em:
 Para rodar o Storybook localmente (dentro do repo `ds-rd`):
 
 ```bash
-pnpm storybook
+npm run storybook
 # → http://localhost:6006
 ```
 

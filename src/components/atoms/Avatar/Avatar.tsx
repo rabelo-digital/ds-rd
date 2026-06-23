@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import styles from "./Avatar.module.css";
 
 export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl";
@@ -29,32 +30,34 @@ export const Avatar: React.FC<AvatarProps> = ({
   name,
   size = "md",
   shape = "circle",
-  className,
+  className
 }) => {
   const [imgError, setImgError] = useState(false);
   const initials = name ? getInitials(name) : null;
   const showImage = src && !imgError;
 
-  return (
-    <span
-      className={[styles.avatar, styles[size], styles[shape], className ?? ""]
-        .filter(Boolean)
-        .join(" ")}
-      aria-label={alt ?? name}
-      role={alt || name ? "img" : undefined}
-    >
-      {showImage ? (
+  const wrapperClass = [styles.avatar, styles[size], styles[shape], className ?? ""]
+    .filter(Boolean)
+    .join(" ");
+
+  if (showImage) {
+    return (
+      <span className={wrapperClass}>
         <img
           src={src}
           alt={alt ?? name ?? ""}
           className={styles.image}
           onError={() => setImgError(true)}
         />
-      ) : (
-        <span className={styles.initials} aria-hidden="true">
-          {initials ?? "?"}
-        </span>
-      )}
+      </span>
+    );
+  }
+
+  return (
+    <span className={wrapperClass} role="img" aria-label={alt ?? name ?? "Avatar"}>
+      <span className={styles.initials} aria-hidden="true">
+        {initials ?? "?"}
+      </span>
     </span>
   );
 };
