@@ -16,9 +16,18 @@ Adicione em seu arquivo CSS global (ex: `globals.css`, `app/layout.tsx`, etc.):
 
 ```css
 @import "@rabelo-digital/ds-rd/tokens.css";
+@import "@rabelo-digital/ds-rd/styles.css";
 ```
 
-Isso define todas as CSS custom properties (`--ds-color-primary`, `--ds-space-4`, etc.) no `:root`.
+Ou em `_app.tsx` / `layout.tsx`:
+
+```tsx
+import "@rabelo-digital/ds-rd/tokens.css";
+import "@rabelo-digital/ds-rd/styles.css";
+```
+
+`tokens.css` define as CSS custom properties (`--ds-color-primary`, `--ds-space-4`, etc.) no `:root`.  
+`styles.css` carrega os estilos dos componentes (CSS Modules compilados com classes escopadas).
 
 ---
 
@@ -112,4 +121,5 @@ O DS é compatível com Next.js App Router e Pages Router. Para importar `tokens
 ```tsx
 // app/layout.tsx
 import "@rabelo-digital/ds-rd/tokens.css";
+import "@rabelo-digital/ds-rd/styles.css";
 ```

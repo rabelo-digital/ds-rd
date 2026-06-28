@@ -1,7 +1,7 @@
 .card {
   background: var(--ds-color-surface);
   border: 1px solid var(--ds-color-border);
-  overflow: hidden;
+  min-width: 0;
 }
 
 .header {
@@ -15,6 +15,7 @@
 .body {
   padding: var(--ds-space-6);
   color: var(--ds-color-text);
+  min-width: 0;
 }
 
 .footer {

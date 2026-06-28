@@ -1,6 +1,6 @@
 {
   "name": "@rabelo-digital/ds-rd",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Rabelo Digital Design System",
   "keywords": [
     "design-system",
@@ -19,29 +19,31 @@
   "sideEffects": [
     "*.css"
   ],
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     },
     "./tokens": {
       "types": "./dist/tokens/index.d.ts",
       "import": "./dist/tokens/index.mjs",
-      "require": "./dist/tokens/index.cjs"
+      "require": "./dist/tokens/index.js"
     },
-    "./tokens.css": "./tokens.css"
+    "./tokens.css": "./tokens.css",
+    "./styles.css": "./dist/index.css"
   },
   "files": [
     "dist",
     "tokens.css"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node scripts/build-bundle.mjs && tsup --config tsup.dts.config.ts",
+    "build:bundle": "node scripts/build-bundle.mjs",
+    "build:types": "tsup --config tsup.dts.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest run",
@@ -98,6 +100,9 @@
     "@vitejs/plugin-react": "^4.7.0",
     "@vitest/coverage-v8": "^2.0.5",
     "axe-playwright": "^2.0.1",
+    "commitizen": "4.3.2",
+    "cz-conventional-changelog": "3.3.0",
+    "esbuild-css-modules-plugin": "^3.1.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^3.10.1",
@@ -112,14 +117,12 @@
     "lint-staged": "13.0.3",
     "prettier": "^3.8.4",
     "size-limit": "^11.1.4",
+    "standard-version": "^9.5.0",
     "storybook": "^8.2.9",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "vite": "^5.3.5",
-    "vitest": "^2.0.5",
-    "standard-version": "^9.5.0",
-    "commitizen": "4.3.2",
-    "cz-conventional-changelog": "3.3.0"
+    "vitest": "^2.0.5"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",

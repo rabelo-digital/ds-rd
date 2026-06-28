@@ -7,9 +7,16 @@ export default defineConfig({
   },
   format: ["esm", "cjs"],
   dts: true,
-  splitting: true,
+  splitting: false,
   sourcemap: true,
   clean: true,
   treeshake: true,
   external: ["react", "react-dom"],
+  esbuildOptions(options) {
+    options.loader = {
+      ...options.loader,
+      ".css": "local-css",
+      ".module.css": "local-css",
+    };
+  },
 });
