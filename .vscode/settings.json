@@ -21,6 +21,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "sonarlint.automaticAnalysis": false,
+  "sonarlint.analysisExcludesStandalone": "**/node_modules/**,**/dist/**,**/build/**,**/coverage/**,**/.scannerwork/**",
 
   "sonarlint.connectedMode.project": {
     "connectionId": "suporte-rd-local",

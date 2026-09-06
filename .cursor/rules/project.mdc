@@ -1,0 +1,12 @@
+---
+description: Particularidades do ds-rd (design system + qualidade)
+alwaysApply: true
+---
+
+Fonte da verdade: `docs/`. Ler `docs/getting-started.md` e `docs/adr/` antes de tarefas arquiteturais.
+
+Particularidades deste repo (o resto vem do harness global `~/.cursor` / `~/.claude`):
+- Design system React (`@rabelo-digital/ds-rd`); tokens + CSS Modules; Storybook; Vitest
+- Qualidade local: `test` focado, `typecheck`, `lint`, `format`/`format:check`; `build` se tocar bundler/exports
+- **MUST NOT** executar Sonar (`sonar:scan`, `quality:check`, `sonar-scanner`) sem pedido explícito
+- OpenSpec: `openspec/config.yaml`

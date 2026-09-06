@@ -34,5 +34,6 @@ rules:
   tasks:
     - Scripts e CI usam npm (`npm run`, `npm ci`), nunca pnpm
     - Validar com `npm run validate` ou `npm run ci:check` quando aplicável
+    - MUST NOT executar Sonar (`sonar:scan`, `sonar-scanner`, `quality:check`) sem pedido explícito
   specs:
     - Requisitos devem ser compatíveis com `docs/getting-started.md` e `docs/migration-guide.md`
