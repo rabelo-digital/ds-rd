@@ -93,6 +93,22 @@
   border-color: var(--ds-color-error-hover);
 }
 
+.accent {
+  background: var(--ds-color-accent);
+  color: var(--ds-color-on-accent);
+  border-color: var(--ds-color-accent);
+}
+
+.accent:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--ds-color-accent-hover);
+  border-color: var(--ds-color-accent-hover);
+}
+
+.accent:active:not(:disabled) {
+  background: var(--ds-color-accent-active);
+  border-color: var(--ds-color-accent-active);
+}
+
 /* States */
 .button:disabled,
 .button[aria-disabled="true"] {

@@ -18,9 +18,9 @@ export const semanticColors = {
     on: primitiveColors.white
   },
   accent: {
-    default: primitiveColors.orange[500],
-    hover: primitiveColors.orange[600],
-    active: primitiveColors.orange[700],
+    default: primitiveColors.orange[600],
+    hover: primitiveColors.orange[700],
+    active: primitiveColors.orange[800],
     subtle: primitiveColors.orange[50],
     on: primitiveColors.white
   },

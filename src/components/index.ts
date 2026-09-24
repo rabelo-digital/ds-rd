@@ -34,6 +34,12 @@ export type {
   SocialIconSize
 } from "./atoms/SocialIcons/SocialIcons";
 
+export { IconButton } from "./atoms/IconButton/IconButton";
+export type { IconButtonProps, IconButtonSize } from "./atoms/IconButton/IconButton";
+
+export { SkipLink } from "./atoms/SkipLink/SkipLink";
+export type { SkipLinkProps } from "./atoms/SkipLink/SkipLink";
+
 // Molecules
 export { Card } from "./molecules/Card/Card";
 export type { CardProps } from "./molecules/Card/Card";

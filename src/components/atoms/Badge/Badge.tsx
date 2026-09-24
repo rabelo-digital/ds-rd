@@ -2,7 +2,14 @@ import React from "react";
 
 import styles from "./Badge.module.css";
 
-export type BadgeVariant = "default" | "primary" | "success" | "warning" | "error" | "info";
+export type BadgeVariant =
+  | "default"
+  | "primary"
+  | "accent"
+  | "success"
+  | "warning"
+  | "error"
+  | "info";
 export type BadgeSize = "sm" | "md";
 
 export interface BadgeProps {

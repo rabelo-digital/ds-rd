@@ -58,6 +58,25 @@ describe("Semantic colors", () => {
     expect(semantic.border.focus).toBeTruthy();
     expect(semantic.border.error).toBeTruthy();
   });
+
+  it("accent colors are defined", () => {
+    expect(semantic.accent.default).toBeTruthy();
+    expect(semantic.accent.on).toBeTruthy();
+  });
+});
+
+describe("Color contrast", () => {
+  it("accent on-accent meets WCAG AA (4.5:1)", async () => {
+    const { contrastRatio } = await import("./contrast");
+    const ratio = contrastRatio(semantic.accent.on, semantic.accent.default);
+    expect(ratio).toBeGreaterThanOrEqual(4.5);
+  });
+
+  it("primary on-primary meets WCAG AA (4.5:1)", async () => {
+    const { contrastRatio } = await import("./contrast");
+    const ratio = contrastRatio(semantic.primary.on, semantic.primary.default);
+    expect(ratio).toBeGreaterThanOrEqual(4.5);
+  });
 });
 
 describe("Spacing tokens", () => {

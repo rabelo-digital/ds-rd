@@ -1,0 +1,38 @@
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--ds-space-2);
+  border: 1px solid transparent;
+  border-radius: var(--ds-radius-md);
+  background: transparent;
+  color: var(--ds-color-text);
+  cursor: pointer;
+  transition: background-color var(--ds-motion-duration-fast) var(--ds-motion-easing-out);
+}
+
+.iconButton:hover:not(:disabled) {
+  background: var(--ds-color-bg-subtle);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--ds-color-border-focus);
+  outline-offset: 2px;
+}
+
+.iconButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sm {
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.lg {
+  min-width: 48px;
+  min-height: 48px;
+}

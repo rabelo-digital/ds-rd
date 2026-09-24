@@ -9,6 +9,7 @@ export interface AvatarProps {
   src?: string;
   alt?: string;
   name?: string;
+  decorative?: boolean;
   size?: AvatarSize;
   shape?: AvatarShape;
   className?: string;
@@ -28,6 +29,7 @@ export const Avatar: React.FC<AvatarProps> = ({
   src,
   alt,
   name,
+  decorative = false,
   size = "md",
   shape = "circle",
   className
@@ -35,6 +37,8 @@ export const Avatar: React.FC<AvatarProps> = ({
   const [imgError, setImgError] = useState(false);
   const initials = name ? getInitials(name) : null;
   const showImage = src && !imgError;
+  const imageAlt = decorative ? "" : (alt ?? "");
+  const accessibleName = decorative ? undefined : (alt ?? name ?? "Avatar");
 
   const wrapperClass = [styles.avatar, styles[size], styles[shape], className ?? ""]
     .filter(Boolean)
@@ -45,7 +49,8 @@ export const Avatar: React.FC<AvatarProps> = ({
       <span className={wrapperClass}>
         <img
           src={src}
-          alt={alt ?? name ?? ""}
+          alt={imageAlt}
+          aria-hidden={decorative || undefined}
           className={styles.image}
           onError={() => setImgError(true)}
         />
@@ -54,7 +59,7 @@ export const Avatar: React.FC<AvatarProps> = ({
   }
 
   return (
-    <span className={wrapperClass} role="img" aria-label={alt ?? name ?? "Avatar"}>
+    <span className={wrapperClass} role="img" aria-label={accessibleName}>
       <span className={styles.initials} aria-hidden="true">
         {initials ?? "?"}
       </span>

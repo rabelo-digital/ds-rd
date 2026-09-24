@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
   argTypes: {
-    variant: { control: "select", options: ["primary", "secondary", "ghost", "danger"] },
+    variant: { control: "select", options: ["primary", "secondary", "ghost", "danger", "accent"] },
     size: { control: "select", options: ["sm", "md", "lg"] },
     loading: { control: "boolean" },
     disabled: { control: "boolean" }
@@ -21,6 +21,7 @@ export const Primary: Story = { args: { children: "Botão primário", variant: "
 export const Secondary: Story = { args: { children: "Botão secundário", variant: "secondary" } };
 export const Ghost: Story = { args: { children: "Botão ghost", variant: "ghost" } };
 export const Danger: Story = { args: { children: "Botão danger", variant: "danger" } };
+export const Accent: Story = { args: { children: "Botão accent", variant: "accent" } };
 export const Loading: Story = { args: { children: "Salvando...", loading: true } };
 export const Disabled: Story = { args: { children: "Desabilitado", disabled: true } };
 export const SmallSize: Story = { args: { children: "Pequeno", size: "sm" } };

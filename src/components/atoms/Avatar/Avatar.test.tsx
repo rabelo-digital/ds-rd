@@ -37,4 +37,12 @@ describe("Avatar", () => {
     render(<Avatar name="Test" shape="square" />);
     expect(screen.getByRole("img").className).toMatch(/square/);
   });
+
+  it("renders decorative image without accessible name", () => {
+    render(<Avatar src="https://example.com/photo.jpg" decorative name="João Silva" />);
+    expect(screen.queryByRole("img", { name: "João Silva" })).not.toBeInTheDocument();
+    const img = document.querySelector("img");
+    expect(img).toHaveAttribute("alt", "");
+    expect(img).toHaveAttribute("aria-hidden", "true");
+  });
 });

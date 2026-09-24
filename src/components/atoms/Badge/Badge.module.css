@@ -24,6 +24,10 @@
   background: var(--ds-color-primary-muted);
   color: var(--ds-color-primary);
 }
+.accent {
+  background: var(--ds-color-accent-subtle);
+  color: var(--ds-color-accent);
+}
 .success {
   background: var(--ds-color-success-muted);
   color: var(--ds-color-success);
